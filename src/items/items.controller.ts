@@ -10,6 +10,6 @@ export class ItemsController {
 
     @Post()
     create(@Body() createItemDto: CreateItemDto): string {
-        return 'create item';
+        return `Name ${createItemDto.name}`;
     }
 }
