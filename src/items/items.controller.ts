@@ -13,8 +13,8 @@ export class ItemsController {
     }
 
     @Get(':id')
-    find(@Param() param) {
-        return 'Item: ' + param.id;
+    find(@Param() param): ItemInterface {
+        return this.itemsService.find(param.id);
     }
 
     @Post()
